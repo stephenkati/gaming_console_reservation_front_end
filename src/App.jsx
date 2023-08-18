@@ -24,8 +24,8 @@ const App = () => {
                 </ProtectedRoutes>
               }
             >
-              <Route path="/" element={<h1>Home</h1>} />
-              <Route path="/dummy" element={<h1>Dummy</h1>} />
+              <Route path="/" element={<h1>Dummy Home Page</h1>} />
+              <Route path="/dummy" element={<h1>Dummy Page</h1>} />
             </Route>
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
