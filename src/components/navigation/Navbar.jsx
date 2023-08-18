@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
-import Logout from '../logout';
+
+import Logout from './logout';
 import MenuIcon from './MenuIcon';
+import SearchIcon from './SearchIcon';
 
 const links = [
   { path: '/', text: 'Home' },
@@ -43,6 +45,8 @@ function Navbar() {
           </li>
         </ul>
       </div>
+
+      <SearchIcon />
     </nav>
   );
 }

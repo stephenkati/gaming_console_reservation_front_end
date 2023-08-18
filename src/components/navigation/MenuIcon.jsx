@@ -2,7 +2,10 @@ import PropTypes from 'prop-types';
 
 function MenuIcon({ onClick }) {
   return (
-    <span className="inline-block lg:hidden cursor-pointer" onClick={onClick}>
+    <span
+      className="inline-block lg:hidden cursor-pointer p-1 hover:bg-gray-200 rounded"
+      onClick={onClick}
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"

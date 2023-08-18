@@ -1,4 +1,4 @@
-import { removeToken } from '../utils/localStorage';
+import { removeToken } from '../../utils/localStorage';
 import { Link } from 'react-router-dom';
 
 const Logout = () => {
