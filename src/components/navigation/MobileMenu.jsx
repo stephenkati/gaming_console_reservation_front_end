@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 
 import Logout from './Logout';
-import MenuIcon from './MenuIcon';
+import MenuButton from './MenuButton';
+import MenuCloseIcon from './MenuCloseIcon';
 
 const links = [
   { path: '/', text: 'Consoles' },
@@ -22,7 +23,7 @@ function MobileMenu() {
       className="absolute top-0 right-0 w-full text-left bg-gray-100 px-4 pt-4 pb-8 lg:hidden hidden"
       id="menu"
     >
-      <MenuIcon onClick={handleMenuClick} />
+      <MenuButton onClick={handleMenuClick} icon={<MenuCloseIcon />} />
 
       <ul className="text-center">
         {links.map((link) => (
