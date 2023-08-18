@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer className="w-full py-2 pr-4">
+    <footer className="w-full py-2 pr-4 hidden lg:block">
       <section>
         <ul className="flex justify-center items-center gap-2">
           {/* Twitter */}

@@ -1,6 +1,6 @@
 function SearchIcon() {
   return (
-    <span className="inline-block lg:hidden cursor-pointer py-2 px-3 rounded bg-gray-700 text-white hover:bg-gray-600">
+    <span className="inline-block lg:hidden cursor-pointer py-2 px-3 rounded bg-gray-700 text-white hover:bg-gray-600 active:bg-gray-800">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
