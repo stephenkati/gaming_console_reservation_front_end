@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import Logout from './logout';
+import Logout from './Logout';
 import MenuIcon from './MenuIcon';
 
 const links = [
