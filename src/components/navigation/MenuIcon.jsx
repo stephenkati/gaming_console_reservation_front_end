@@ -1,6 +1,8 @@
-function MenuIcon() {
+import PropTypes from 'prop-types';
+
+function MenuIcon({ onClick }) {
   return (
-    <span className="inline-block lg:hidden cursor-pointer">
+    <span className="inline-block lg:hidden cursor-pointer" onClick={onClick}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -18,5 +20,9 @@ function MenuIcon() {
     </span>
   );
 }
+
+MenuIcon.propTypes = {
+  onClick: PropTypes.func.isRequired,
+};
 
 export default MenuIcon;

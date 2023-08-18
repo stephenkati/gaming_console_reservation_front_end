@@ -7,10 +7,15 @@ const links = [
   { path: '/dummy', text: 'Dummy' },
 ];
 
+const handleMenuClick = () => {
+  const menu = document.querySelector('#menu');
+  menu.classList.toggle('hidden');
+};
+
 function Navbar() {
   return (
     <nav className="flex justify-between items-center p-4 relative">
-      <MenuIcon />
+      <MenuIcon onClick={handleMenuClick} />
 
       <span className="hidden lg:inline-block">Logo</span>
 
@@ -18,7 +23,7 @@ function Navbar() {
         className="absolute top-0 right-0 w-full text-left bg-gray-100 p-4 lg:hidden"
         id="menu"
       >
-        <MenuIcon />
+        <MenuIcon onClick={handleMenuClick} />
 
         <ul className="text-center">
           {links.map((link) => (
