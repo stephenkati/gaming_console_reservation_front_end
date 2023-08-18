@@ -2,8 +2,11 @@ import Logout from './logout';
 import { Link } from 'react-router-dom';
 
 const links = [
-  { path: '/', text: 'Home' },
-  { path: '/dummy', text: 'Dummy' },
+  { path: '/', text: 'Consoles' },
+  { path: '/reserve', text: 'Reserve a console' },
+  { path: '/reservations', text: 'My reservations' },
+  { path: '/new', text: 'Add a new console' },
+  { path: '/delete', text: 'Delete a console' },
 ];
 
 function DesktopLinks() {
