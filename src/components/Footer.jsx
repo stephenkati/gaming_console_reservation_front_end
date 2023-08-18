@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer className="w-full py-2 pr-4 hidden lg:block">
+    <div className="w-full py-2 pr-4 flex justify-center items-center gap-4 lg:block">
       <section>
         <ul className="flex justify-center items-center gap-2">
           {/* Twitter */}
@@ -73,7 +73,7 @@ function Footer() {
           &copy; 2023 ConsoleHub. SRR.
         </p>
       </section>
-    </footer>
+    </div>
   );
 }
 

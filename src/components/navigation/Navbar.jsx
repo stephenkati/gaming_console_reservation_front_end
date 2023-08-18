@@ -27,8 +27,9 @@ function Navbar() {
 
       <SearchIcon />
 
-      <span className="hidden lg:inline-block"></span>
-      <Footer />
+      <footer className="hidden lg:inline-block">
+        <Footer />
+      </footer>
     </nav>
   );
 }
