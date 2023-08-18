@@ -1,5 +1,11 @@
+import Logout from './logout';
+
 function Navbar() {
-  return <div style={{ color: 'red' }}>Navbar</div>;
+  return (
+    <nav>
+      <Logout />
+    </nav>
+  );
 }
 
 export default Navbar;
