@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addConsole } from './consoleSlice'
+import { addConsole } from '../../redux/actions'
 const ConsoleForm = () => {
   const dispatch = useDispatch();
   const [disabled, setDisabled] = useState(false)
@@ -14,9 +14,13 @@ const ConsoleForm = () => {
     e.preventDefault();
     setDisabled(true)
     console.log({ consoleName, purchasePrice, rentalPrice, description, consolePhoto });
-    const newConsole = { consoleName, purchasePrice, rentalPrice, description, consolePhoto };
+    const newConsole = { name: consoleName, purchase_price: purchasePrice, rental_price: rentalPrice, description: description, photo: consolePhoto };
     dispatch(addConsole(newConsole));
-
+    setConsoleName('');
+    setPurchasePrice(0);
+    setRentalPrice(0);
+    setDescription('');
+    setConsolePhoto('')
   };
 
   return (
