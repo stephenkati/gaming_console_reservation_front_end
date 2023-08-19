@@ -13,13 +13,17 @@ const ConsoleForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setDisabled(true)
-    const newConsole = { name: consoleName, purchase_price: purchasePrice, rental_price: rentalPrice, description: description, photo: consolePhoto };
-    await dispatch(addConsole(newConsole));
-    setConsoleName('');
-    setPurchasePrice(0);
-    setRentalPrice(0);
-    setDescription('');
-    setConsolePhoto('')
+    if (consoleName !== "" && purchasePrice > 0 && rentalPrice > 0 && description !== "" && consolePhoto !== "") {
+      const newConsole = { name: consoleName, purchase_price: purchasePrice, rental_price: rentalPrice, description: description, photo: consolePhoto };
+      await dispatch(addConsole(newConsole));
+      setConsoleName('');
+      setPurchasePrice(0);
+      setRentalPrice(0);
+      setDescription('');
+      setConsolePhoto('')
+    } else {
+      alert('All fields required')
+    }
     setDisabled(false)
   };
 
