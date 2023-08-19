@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addConsole } from '../../redux/actions'
+import { useNavigate } from 'react-router-dom';
 const ConsoleForm = () => {
   const dispatch = useDispatch();
-  const message = useSelector(state => state.consoles.message);
+  const navigate = useNavigate();
+  const message = useSelector(state => state.consoles);
   const [disabled, setDisabled] = useState(false)
   const [consoleName, setConsoleName] = useState('');
   const [purchasePrice, setPurchasePrice] = useState(0);
@@ -11,12 +13,12 @@ const ConsoleForm = () => {
   const [description, setDescription] = useState('');
   const [consolePhoto, setConsolePhoto] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setDisabled(true)
-    console.log({ consoleName, purchasePrice, rentalPrice, description, consolePhoto });
     const newConsole = { name: consoleName, purchase_price: purchasePrice, rental_price: rentalPrice, description: description, photo: consolePhoto };
-    dispatch(addConsole(newConsole));
+    await dispatch(addConsole(newConsole));
+    navigate('/');
     setConsoleName('');
     setPurchasePrice(0);
     setRentalPrice(0);
@@ -29,7 +31,7 @@ const ConsoleForm = () => {
   return (
     <div className="flex flex-col gap-4 items-center  p-2 rounded-lg">
       <h2 className="text-2xl font-bold text-secondary">Add a New Console</h2>
-      {message && <div>{message}</div>}
+      {/* {message && <div>{message}</div>} */}
       <form className="flex flex-col gap-2 p-2 border" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name" className="text-secondary text-left px-2">Name:</label>
@@ -38,19 +40,19 @@ const ConsoleForm = () => {
         </div>
         <div>
           <label htmlFor="purchasePrice" className="text-secondary text-left px-2">Purchase Price:</label>
-          <input className="w-full bg-primary border text-black rounded-full p-2" id="purchasePrice" type="number" value={purchasePrice} onChange={(e) => setPurchasePrice(e.target.value)} />
+          <input required className="w-full bg-primary border text-black rounded-full p-2" id="purchasePrice" type="number" value={purchasePrice} onChange={(e) => setPurchasePrice(e.target.value)} />
         </div>
         <div>
           <label htmlFor="rentalPrice" className="text-secondary text-left px-2">Rental Price:</label>
-          <input className="w-full bg-primary text-black rounded-full border p-2" id="rentalPrice" type="number" value={rentalPrice} onChange={(e) => setRentalPrice(e.target.value)} />
+          <input required className="w-full bg-primary text-black rounded-full border p-2" id="rentalPrice" type="number" value={rentalPrice} onChange={(e) => setRentalPrice(e.target.value)} />
         </div>
         <div>
           <label htmlFor="description" className="text-secondary text-left px-2">Description:</label>
-          <input className="w-full bg-primary text-black rounded-full border p-2" id="description" type="text" value={description} onChange={(e) => setDescription(e.target.value)} />
+          <input required className="w-full bg-primary text-black rounded-full border p-2" id="description" type="text" value={description} onChange={(e) => setDescription(e.target.value)} />
         </div>
         <div>
           <label htmlFor="photo" className="text-secondary text-left px-2">Photo:</label>
-          <input className="w-full bg-primary text-black rounded-full border p-2" id="photo" type="text" value={consolePhoto} onChange={(e) => setConsolePhoto(e.target.value)} />
+          <input required className="w-full bg-primary text-black rounded-full border p-2" id="photo" type="text" value={consolePhoto} onChange={(e) => setConsolePhoto(e.target.value)} />
         </div>
         <button type="submit" disabled={disabled}
           className={disabled ? "w-full border text-light rounded-lg p-2 mt-2" : "w-full bg-secondary text-primary rounded-lg p-2 mt-2"}>Add Console</button>
