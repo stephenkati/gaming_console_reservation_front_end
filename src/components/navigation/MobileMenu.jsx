@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import Logout from './Logout';
+import LogoutLink from './LogoutLink';
 import MenuButton from './MenuButton';
 import MenuCloseIcon from './MenuCloseIcon';
 
@@ -39,7 +39,7 @@ function MobileMenu() {
           className="py-2 hover:bg-gray-200 rounded"
           onClick={handleMenuClick}
         >
-          <Logout />
+          <LogoutLink />
         </li>
       </ul>
     </div>

@@ -1,7 +1,7 @@
 import { removeToken } from '../../utils/localStorage';
 import { Link } from 'react-router-dom';
 
-const Logout = () => {
+const LogoutLink = () => {
   const handleLogout = () => {
     removeToken();
   };
@@ -13,4 +13,4 @@ const Logout = () => {
   );
 };
 
-export default Logout;
+export default LogoutLink;

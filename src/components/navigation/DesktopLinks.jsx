@@ -1,4 +1,4 @@
-import Logout from './Logout';
+import LogoutLink from './LogoutLink';
 import { Link } from 'react-router-dom';
 
 const links = [
@@ -18,7 +18,7 @@ function DesktopLinks() {
         </li>
       ))}
       <li className="py-2 px-4 hover:bg-lime-400">
-        <Logout />
+        <LogoutLink />
       </li>
     </ul>
   );
