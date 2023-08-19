@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { addConsole } from '../../redux/actions'
 const ConsoleForm = () => {
   const dispatch = useDispatch();
+  const message = useSelector(state => state.consoles.message);
   const [disabled, setDisabled] = useState(false)
   const [consoleName, setConsoleName] = useState('');
   const [purchasePrice, setPurchasePrice] = useState(0);
@@ -21,11 +22,14 @@ const ConsoleForm = () => {
     setRentalPrice(0);
     setDescription('');
     setConsolePhoto('')
+    setDisabled(false)
+    console.log(message);
   };
 
   return (
     <div className="flex flex-col gap-4 items-center  p-2 rounded-lg">
       <h2 className="text-2xl font-bold text-secondary">Add a New Console</h2>
+      {message && <div>{message}</div>}
       <form className="flex flex-col gap-2 p-2 border" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name" className="text-secondary text-left px-2">Name:</label>
