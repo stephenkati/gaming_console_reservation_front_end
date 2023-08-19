@@ -12,7 +12,7 @@ import './App.css';
 
 const App = () => {
   return (
-    <div className="app flex flex-col lg:flex-row min-h-screen">
+    <div className="app">
       <Provider store={store}>
         <BrowserRouter>
           <Routes>
