@@ -4,7 +4,6 @@ export const addConsole = (consoleData) => {
   return async (dispatch) => {
     try {
       const response = await customApi.post('/api/v1/consoles', { console: consoleData });
-      console.log(response.data);
       dispatch({
         type: 'ADD_CONSOLE_SUCCESS',
         payload: {
@@ -12,6 +11,7 @@ export const addConsole = (consoleData) => {
           message: 'Console added successfully.',
         },
       });
+      alert('Console added successfully.')
     } catch (error) {
       const errorMessage = 'Error adding console: ' + error.message;
 
@@ -22,7 +22,7 @@ export const addConsole = (consoleData) => {
           message: errorMessage,
         },
       });
-
+      alert(errorMessage)
       console.error(errorMessage);
     }
   };

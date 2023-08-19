@@ -1,11 +1,8 @@
 import { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { addConsole } from '../../redux/actions'
-import { useNavigate } from 'react-router-dom';
 const ConsoleForm = () => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
-  const message = useSelector(state => state.consoles);
   const [disabled, setDisabled] = useState(false)
   const [consoleName, setConsoleName] = useState('');
   const [purchasePrice, setPurchasePrice] = useState(0);
@@ -18,20 +15,17 @@ const ConsoleForm = () => {
     setDisabled(true)
     const newConsole = { name: consoleName, purchase_price: purchasePrice, rental_price: rentalPrice, description: description, photo: consolePhoto };
     await dispatch(addConsole(newConsole));
-    navigate('/');
     setConsoleName('');
     setPurchasePrice(0);
     setRentalPrice(0);
     setDescription('');
     setConsolePhoto('')
     setDisabled(false)
-    console.log(message);
   };
 
   return (
     <div className="flex flex-col gap-4 items-center  p-2 rounded-lg">
       <h2 className="text-2xl font-bold text-secondary">Add a New Console</h2>
-      {/* {message && <div>{message}</div>} */}
       <form className="flex flex-col gap-2 p-2 border" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name" className="text-secondary text-left px-2">Name:</label>
