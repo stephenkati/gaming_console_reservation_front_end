@@ -1,4 +1,4 @@
-import { createAsyncThunk } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import customApi from '../../utils/axios';
 import { getToken } from '../../utils/localStorage';
 
@@ -36,4 +36,32 @@ const fetchUserReservations = createAsyncThunk(
   }
 );
 
+const initialState = {
+  reservations: [],
+  isLoading: false,
+  error: null,
+};
+
+const reservationsSlice = createSlice({
+  name: 'reservations',
+  initialState,
+  reducers: {},
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchUserReservations.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(fetchUserReservations.fulfilled, (state, { payload }) => {
+        state.isLoading = false;
+        state.reservations = payload;
+      })
+      .addCase(fetchUserReservations.rejected, (state, { payload }) => {
+        state.isLoading = false;
+        state.error = payload;
+      });
+  },
+});
+
 export { fetchUserReservations };
+
+export default reservationsSlice.reducer;
