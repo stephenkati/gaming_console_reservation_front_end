@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -17,16 +29,14 @@ a {
   text-decoration: inherit;
 }
 
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+}
+
+.consolehub {
+  font-family: 'Pacifico', cursive;
 }
 
 @tailwind base;

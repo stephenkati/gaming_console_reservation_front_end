@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "my-lint": "npx eslint \"**/*.{js,jsx}\" && npx stylelint \"**/*.{css,scss}\"",
+    "fix": "npx eslint \"**/*.{js,jsx}\" --fix && npx stylelint \"**/*.{css,scss}\" --fix"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
