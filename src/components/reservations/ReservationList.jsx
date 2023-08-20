@@ -2,6 +2,8 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchUserReservations } from '../../redux/reservations/reservationsSlice';
 
+import styles from './ReservationList.module.css';
+
 function ReservationList() {
   const dispatch = useDispatch();
   const { reservations, isLoading, error } = useSelector(
@@ -25,15 +27,20 @@ function ReservationList() {
   }
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 text-gray-500 text-sm">
       <header className="text-center">
-        <h1 className="text-3xl font-bold mb-4">Reservations</h1>
-        <p>These are your reserved gamming consoles</p>
+        <h1 className="text-3xl font-semi-bold mb-4 text-gray-800">
+          Reservations
+        </h1>
+        <p className="font-semi-bold">
+          You have <span className="font-bold">{reservations.length}</span>{' '}
+          gamming console(s) reserved
+        </p>
       </header>
 
-      <ul>
+      <ul className={styles.reservationList}>
         {reservations.map((reservation) => (
-          <li key={reservation.id}>
+          <li key={reservation.id} className={styles.reservationCard}>
             <p>Date: {reservation.reserve_date}</p>
             <p>City: {reservation.city}</p>
           </li>
