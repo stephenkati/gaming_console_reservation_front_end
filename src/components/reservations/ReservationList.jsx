@@ -37,6 +37,7 @@ function ReservationList() {
           You have <span className="font-bold">{reservations.length}</span>{' '}
           gamming console(s) reserved
         </p>
+        <span className="w-32 border-b-2 border-dashed border-gray-300 inline-block mt-4"></span>
       </header>
 
       <div className="reservations_slider relative flex items-center py-8 px-16 md:px-12 lg:px-20 xl:px-32">
