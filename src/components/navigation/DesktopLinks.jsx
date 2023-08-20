@@ -13,11 +13,16 @@ function DesktopLinks() {
   return (
     <ul className="hidden lg:block w-full">
       {links.map((link) => (
-        <li key={link.path} className="py-2 px-4 hover:bg-lime-400">
-          <Link to={link.path}>{link.text}</Link>
+        <li key={link.path}>
+          <Link
+            to={link.path}
+            className="py-2 px-4 hover:bg-lime-400 w-full inline-block font-semibold"
+          >
+            {link.text}
+          </Link>
         </li>
       ))}
-      <li className="py-2 px-4 hover:bg-lime-400">
+      <li>
         <LogoutLink />
       </li>
     </ul>

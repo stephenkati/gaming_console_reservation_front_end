@@ -27,18 +27,16 @@ function MobileMenu() {
 
       <ul className="text-center">
         {links.map((link) => (
-          <li
-            key={link.path}
-            className="py-2 hover:bg-gray-200 rounded"
-            onClick={handleMenuClick}
-          >
-            <Link to={link.path}>{link.text}</Link>
+          <li key={link.path} onClick={handleMenuClick}>
+            <Link
+              to={link.path}
+              className="py-2 hover:bg-gray-200 rounded w-full block font-semibold"
+            >
+              {link.text}
+            </Link>
           </li>
         ))}
-        <li
-          className="py-2 hover:bg-gray-200 rounded"
-          onClick={handleMenuClick}
-        >
+        <li onClick={handleMenuClick}>
           <LogoutLink />
         </li>
       </ul>
