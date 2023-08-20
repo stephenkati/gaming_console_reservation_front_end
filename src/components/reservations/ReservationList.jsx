@@ -13,7 +13,11 @@ function ReservationList() {
   }, [dispatch]);
 
   if (isLoading) {
-    return <h1>Loading...</h1>;
+    return (
+      <div className="h-screen flex justify-center items-center">
+        <h1>Loading...</h1>
+      </div>
+    );
   }
 
   if (error) {

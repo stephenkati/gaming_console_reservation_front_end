@@ -19,7 +19,6 @@ const fetchUserReservations = createAsyncThunk(
       });
 
       const reservations = response.data;
-      console.log(reservations);
       return reservations;
     } catch (error) {
       if (
