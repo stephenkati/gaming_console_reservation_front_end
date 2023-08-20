@@ -28,7 +28,7 @@ function ReservationList() {
   }
 
   return (
-    <div className="flex flex-col gap-4 text-gray-500 text-sm h-full">
+    <div className="flex flex-col justify-center gap-4 text-gray-500 text-sm py-8 h-full">
       <header className="text-center">
         <h1 className="text-3xl font-semi-bold mb-4 text-gray-800">
           Reservations
@@ -39,7 +39,7 @@ function ReservationList() {
         </p>
       </header>
 
-      <div className="reservations_sliderborder border-gray-200 lg:flex-grow">
+      <div className="reservations_slider px-4 md:px-12 lg:px-20 py-8 relative flex items-center">
         <Slider reservations={reservations} />
       </div>
     </div>
