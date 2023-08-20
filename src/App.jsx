@@ -10,6 +10,7 @@ import Layout from './components/Layout';
 
 import store from './redux/store';
 import './App.css';
+import Consoles from './pages/consoles';
 
 const App = () => {
   return (
@@ -25,7 +26,7 @@ const App = () => {
                 </ProtectedRoutes>
               }
             >
-              <Route path="/" element={<h1>Consoles</h1>} />
+              <Route path="/" element={<Consoles />} />
               <Route path="/reserve" element={<h1>Reserve a console</h1>} />
               <Route path="/reservations" element={<h1>My reservations</h1>} />
               <Route path="/new" element={<AddConsole />} />
