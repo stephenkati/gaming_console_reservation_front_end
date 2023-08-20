@@ -21,7 +21,7 @@ function ReservationList() {
   }
 
   if (error) {
-    return <h1>{error}</h1>;
+    return <h1 className="mt-8 text-center text-xl text-red-300">{error}</h1>;
   }
 
   return (
