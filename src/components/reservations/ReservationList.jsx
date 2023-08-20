@@ -17,7 +17,7 @@ function ReservationList() {
 
   if (isLoading) {
     return (
-      <div className="h-screen flex justify-center items-center">
+      <div className="h-[50vh] flex justify-center items-center">
         <h1>Loading...</h1>
       </div>
     );

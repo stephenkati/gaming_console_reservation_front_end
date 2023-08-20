@@ -20,7 +20,7 @@ function handleMenuClick() {
 function MobileMenu() {
   return (
     <div
-      className="absolute top-0 right-0 w-full text-left bg-gray-100 px-4 pt-4 pb-8 lg:hidden hidden"
+      className="absolute top-0 right-0 w-full text-left bg-gray-100 px-4 pt-4 pb-8 lg:hidden hidden shadow-lg"
       id="menu"
     >
       <MenuButton onClick={handleMenuClick} icon={<MenuCloseIcon />} />
