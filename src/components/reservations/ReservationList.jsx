@@ -25,8 +25,12 @@ function ReservationList() {
   }
 
   return (
-    <div>
-      <h1>Reservations</h1>
+    <div className="flex flex-col gap-4">
+      <header className="text-center">
+        <h1 className="text-3xl font-bold mb-4">Reservations</h1>
+        <p>These are your reserved gamming consoles</p>
+      </header>
+
       <ul>
         {reservations.map((reservation) => (
           <li key={reservation.id}>
