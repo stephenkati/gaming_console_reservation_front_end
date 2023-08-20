@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { fetchUserReservations } from '../../redux/reservations/reservationsSlice';
 
-import ReservationItem from './ReservationItem';
+import Slider from './Slider';
 
 function ReservationList() {
   const dispatch = useDispatch();
@@ -40,9 +40,7 @@ function ReservationList() {
       </header>
 
       <ul className="reservation_slider">
-        {reservations.map((reservation) => (
-          <ReservationItem key={reservation.id} reservation={reservation} />
-        ))}
+        <Slider reservations={reservations} />
       </ul>
     </div>
   );
