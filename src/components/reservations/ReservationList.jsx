@@ -1,8 +1,9 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+
 import { fetchUserReservations } from '../../redux/reservations/reservationsSlice';
 
-import styles from './ReservationList.module.css';
+import ReservationItem from './ReservationItem';
 
 function ReservationList() {
   const dispatch = useDispatch();
@@ -38,12 +39,9 @@ function ReservationList() {
         </p>
       </header>
 
-      <ul className={styles.reservationList}>
+      <ul className="reservation_slider">
         {reservations.map((reservation) => (
-          <li key={reservation.id} className={styles.reservationCard}>
-            <p>Date: {reservation.reserve_date}</p>
-            <p>City: {reservation.city}</p>
-          </li>
+          <ReservationItem key={reservation.id} reservation={reservation} />
         ))}
       </ul>
     </div>
