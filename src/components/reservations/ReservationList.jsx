@@ -39,7 +39,7 @@ function ReservationList() {
         </p>
       </header>
 
-      <div className="reservations_slider px-4 md:px-12 lg:px-20 py-8 relative flex items-center">
+      <div className="reservations_slider relative flex items-center py-8 px-16 md:px-12 lg:px-20 xl:px-32">
         <Slider reservations={reservations} />
       </div>
     </div>

@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 
+import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import ReservationItem from './ReservationItem';
+
 import SliderNextButton from './SliderNextButton';
 import SliderPrevButton from './SliderPrevButton';
-
-import ReservationItem from './ReservationItem';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -12,10 +13,24 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 function Slider({ reservations }) {
+  const [slidesPerView, setSlidesPerView] = useState(1);
+
+  const handleResize = () => {
+    if (window.innerWidth < 640) {
+      setSlidesPerView(1);
+    } else if (window.innerWidth >= 640 && window.innerWidth < 768) {
+      setSlidesPerView(2);
+    } else if (window.innerWidth >= 768) {
+      setSlidesPerView(3);
+    }
+  };
+
+  window.addEventListener('resize', handleResize);
+
   return (
     <Swiper
       spaceBetween={10}
-      slidesPerView={3}
+      slidesPerView={slidesPerView}
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}
       className="static"
