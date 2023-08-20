@@ -12,7 +12,7 @@ function Layout() {
         <Outlet />
       </main>
 
-      <footer className="lg:hidden sticky bottom-0 w-full z-10 border-t border-gray-200 bg-white">
+      <footer className="lg:hidden fixed bottom-0 w-full z-10 border-t border-gray-200 bg-white">
         <Footer />
       </footer>
     </div>
