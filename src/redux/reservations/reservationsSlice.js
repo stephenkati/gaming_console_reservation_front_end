@@ -18,7 +18,24 @@ const fetchUserReservations = createAsyncThunk(
         },
       });
 
-      const reservations = response.data;
+      const reservations = await Promise.all(
+        response.data.map(async (reservation) => {
+          const consoleResponse = await customApi.get(
+            `/api/v1/consoles/${reservation.console_id}`
+          );
+
+          const consoleData = consoleResponse.data;
+
+          return {
+            id: reservation.id,
+            user_id: reservation.user_id,
+            city: reservation.city,
+            reserve_date: reservation.reserve_date,
+            console: consoleData.data,
+          };
+        })
+      );
+
       return reservations;
     } catch (error) {
       if (
