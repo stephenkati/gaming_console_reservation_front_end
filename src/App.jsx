@@ -11,6 +11,7 @@ import Reservations from './pages/Reservations';
 
 import store from './redux/store';
 import './App.css';
+import Consoles from './pages/consoles';
 
 const App = () => {
   return (
@@ -26,7 +27,7 @@ const App = () => {
                 </ProtectedRoutes>
               }
             >
-              <Route path="/" element={<h1>Consoles</h1>} />
+              <Route path="/" element={<Consoles />} />
               <Route path="/reserve" element={<h1>Reserve a console</h1>} />
               <Route path="/reservations" element={<Reservations />} />
               <Route path="/new" element={<AddConsole />} />
