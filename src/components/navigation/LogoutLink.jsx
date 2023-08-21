@@ -7,7 +7,11 @@ const LogoutLink = () => {
   };
 
   return (
-    <Link to="/login" onClick={handleLogout}>
+    <Link
+      to="/login"
+      onClick={handleLogout}
+      className="py-2 px-4 hover:bg-lime-400 w-full inline-block font-semibold"
+    >
       Logout
     </Link>
   );
