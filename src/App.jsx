@@ -8,6 +8,7 @@ import AddConsole from './pages/AddConsole';
 import ProtectedRoutes from './components/protetedRoutes';
 import Layout from './components/Layout';
 import Reservations from './pages/Reservations';
+import ConsoleDetail from './components/details/ConsoleDetail';
 
 import store from './redux/store';
 import './App.css';
@@ -28,6 +29,7 @@ const App = () => {
               }
             >
               <Route path="/" element={<Consoles />} />
+              <Route path="/console/:id" element={<ConsoleDetail />} />
               <Route path="/reserve" element={<h1>Reserve a console</h1>} />
               <Route path="/reservations" element={<Reservations />} />
               <Route path="/new" element={<AddConsole />} />
