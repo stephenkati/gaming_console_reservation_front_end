@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getConsoles } from '../redux/consoleSlice';
 import { CiFacebook, CiTwitter, CiInstagram } from 'react-icons/ci';
-import { Carousel } from 'react-responsive-carousel';
 
 const ConsoleItems = () => {
   const dispatch = useDispatch();
@@ -18,7 +17,7 @@ const ConsoleItems = () => {
         <p className="text-lg">Please select a Console</p>
       </div>
     
-      <carousel className="w-full flex justify-around">
+      <div className="w-full flex justify-around">
         {consoles.map((console) => (
             <div key={console.id} className="flex flex-col gap-1 w-60 h-72 items-center justify-between p-2">
               <img src={console.photo} alt={console.name} className="w-4/6 h-2/5" />
@@ -33,7 +32,7 @@ const ConsoleItems = () => {
               </div>  
             </div>
         ))}
-      </carousel>
+      </div>
     </div>
   )
 }
