@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import ReservationItem from './ReservationItem';
 
@@ -25,7 +25,18 @@ function Slider({ reservations }) {
     }
   };
 
-  window.addEventListener('resize', handleResize);
+  useEffect(() => {
+    // Call handleResize when the component mounts
+    handleResize();
+
+    // Add resize event listener
+    window.addEventListener('resize', handleResize);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <Swiper
