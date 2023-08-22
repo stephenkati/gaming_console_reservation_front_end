@@ -12,7 +12,6 @@ function ConsoleDetail() {
         SettheConsole(element);
       }
     });
-    console.log(consoles);
   }, [id, consoles])
 
   return (

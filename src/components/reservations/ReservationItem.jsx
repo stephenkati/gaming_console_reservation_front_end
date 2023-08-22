@@ -10,7 +10,7 @@ const ReservationItem = ({ reservation }) => {
   };
 
   return (
-    <div key={reservation.id} className="rounded p-4 text-center">
+    <div key={reservation.id} className="rounded p-4 text-center w-full">
       <div className="mb-4 grid place-items-center rounded-full w-52 h-52 mx-auto bg-gray-100">
         <img
           src={reservation.console.photo || 'https://via.placeholder.com/150'}
@@ -18,7 +18,6 @@ const ReservationItem = ({ reservation }) => {
           className="object-cover rounded"
         />
       </div>
-
       <h2 className="font-bold px-4 pt-2 pb-3 border-b border-b-2 border-dashed border-gray-300 inline-block">
         {reservation.console.name}
       </h2>
