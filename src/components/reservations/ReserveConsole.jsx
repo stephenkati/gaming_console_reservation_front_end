@@ -55,7 +55,7 @@ const ReserveConsole = () => {
     <div className="w-full flex flex-col gap-4 text-center items-center justify-center h-full px-2 py-7">
       <h1 className="font-bold tracking-widest text-xl border-b border-black border-solid inline-block pb-2 px-7">BOOK A CONSOLE RESERVATION</h1>
 
-      <p className="text-sm max-w-md">Try out the latest consoles and a variety of games. Whether it's for a special occasion or to explore new gaming horizons, renting a console gives you the flexibility, convenience, and excitement you're looking for. </p>
+      <p className="text-sm max-w-md">Try out the latest consoles and a variety of games. Whether it&apos;s for a special occasion or to explore new gaming horizons, renting a console gives you the flexibility, convenience, and excitement you&apos;re looking for. </p>
 
       <form className="flex flex-wrap w-max gap-1 justify-center">
         <input
