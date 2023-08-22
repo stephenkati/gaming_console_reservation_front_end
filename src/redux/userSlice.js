@@ -7,8 +7,6 @@ const makeApiCall = async (endpoint, user, thunkAPI) => {
     const response = await customApi.post(endpoint, user);
 
     const data = await response.data;
-
-    // const token = response.headers['authorization'];
     const headers = response.headers;
     const accessToken = headers.get('access-token');
     const client = headers.get('client');
