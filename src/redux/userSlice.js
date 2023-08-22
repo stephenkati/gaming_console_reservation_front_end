@@ -25,7 +25,8 @@ const makeApiCall = async (endpoint, user, thunkAPI) => {
       'authorization': authorizationToken,
     }
     if (response.status === 201 || response.status === 200) {
-      saveToken(token)
+      const user_id = data.data.id
+      saveToken(token, user_id)
       return { user: data };
     }
 
