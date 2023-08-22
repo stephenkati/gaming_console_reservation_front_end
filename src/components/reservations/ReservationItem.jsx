@@ -1,6 +1,14 @@
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { deleteReservation } from '../../redux/reservations/reserveConsoleSlice';
 
-function ReservationItem({ reservation }) {
+const ReservationItem = ({ reservation }) => {
+  const dispatch = useDispatch();
+
+  const handleDelete = (id) => {
+    dispatch(deleteReservation(id));
+  };
+
   return (
     <div key={reservation.id} className="rounded p-4 text-center">
       <div className="mb-4 grid place-items-center rounded-full w-52 h-52 mx-auto bg-gray-100">
@@ -11,7 +19,6 @@ function ReservationItem({ reservation }) {
         />
       </div>
 
-      {console.log(reservation)}
       <h2 className="font-bold px-4 pt-2 pb-3 border-b border-b-2 border-dashed border-gray-300 inline-block">
         {reservation.console.name}
       </h2>
@@ -30,6 +37,14 @@ function ReservationItem({ reservation }) {
           </span>
         </p>
       </div>
+
+      <button
+        type="button"
+        onClick={() => handleDelete(reservation.id)}
+        className="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded"
+      >
+        Delete
+      </button>
     </div>
   );
 }
