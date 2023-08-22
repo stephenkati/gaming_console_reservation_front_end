@@ -39,6 +39,34 @@ const createReservation = createAsyncThunk(
   }
 );
 
+const deleteReservation = createAsyncThunk(
+  "reserveConsole/deleteReservation",
+  async (reservation_id, thunkAPI) => {
+    try {
+      const response = await customApi.delete(
+        `/api/v1/reservations/${reservation_id}`,
+        { headers }
+      );
+
+      const data = await response.data;
+
+      if (response.status === 200) {
+        return { reservation: data };
+      }
+    } catch (error) {
+      if (
+        error.response &&
+        (error.response.status === 401 || error.response.status === 422)
+      ) {
+        return thunkAPI.rejectWithValue(error.response.data.errors[0]);
+      }
+      return thunkAPI.rejectWithValue(
+        error.response?.data.errors || "Unknown error"
+      );
+    }
+  }
+);
+
 const initialState = {
   isLoading: false,
   error: null,
@@ -64,9 +92,23 @@ const reserveConsoleSlice = createSlice({
         state.isLoading = false;
         state.reserved = false;
         state.error = action.payload;
+      })
+
+      .addCase(deleteReservation.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(deleteReservation.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.reserved = true;
+        state.reservation = action.payload.reservation;
+      })
+      .addCase(deleteReservation.rejected, (state, action) => {
+        state.isLoading = false;
+        state.reserved = false;
+        state.error = action.payload;
       });
   }
 });
 
-export { createReservation };
+export { createReservation, deleteReservation };
 export default reserveConsoleSlice.reducer;
