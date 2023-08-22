@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 function ConsoleDetail() {
@@ -30,8 +30,18 @@ function ConsoleDetail() {
               <p className="text-md p-1">Rental Price: {theConsole.rental_price} $</p>
             </div>
             <div className="flex flex-col w-full justify-center items-center">
-              <button
-                className="w-2/5 bg-secondary text-primary rounded-lg p-2 mt-3">Reserve</button>
+
+              <Link
+                to={`/reserve/${theConsole.id}`}
+              >
+                <button
+                  type="button"
+                  className="w-full bg-secondary text-primary rounded-lg p-2 mt-3"
+                >
+                  Reserve
+                </button>
+              </Link>
+
             </div>
           </div>
         </div>
