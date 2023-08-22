@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getUser } from '../../utils/localStorage';
 import DatePicker from 'react-datepicker';
