@@ -30,19 +30,11 @@ const fetchUserReservations = createAsyncThunk(
             console: consoleData.data,
           };
         })
+
       );
       const headers = response.headers;
-      const client = headers.get('client');
-      const uid = headers.get('uid');
-      const tokenType = headers.get('token-type');
       const authorizationToken = headers.get('authorization')
-      const oldToken = getToken()
       const newToken = {
-        'access-token': oldToken['access-token'],
-        'client': client,
-        'uid': uid,
-        'expiry': oldToken.expiry,
-        'token-type': tokenType,
         'authorization': authorizationToken,
       }
       if (response.status === 201 || response.status === 200) {

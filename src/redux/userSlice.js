@@ -8,18 +8,8 @@ const makeApiCall = async (endpoint, user, thunkAPI) => {
 
     const data = await response.data;
     const headers = response.headers;
-    const accessToken = headers.get('access-token');
-    const client = headers.get('client');
-    const uid = headers.get('uid');
-    const expiry = headers.get('expiry');
-    const tokenType = headers.get('token-type');
     const authorizationToken = headers.get('authorization')
     const token = {
-      'access-token': accessToken,
-      'client': client,
-      'uid': uid,
-      'expiry': expiry,
-      'token-type': tokenType,
       'authorization': authorizationToken,
     }
     if (response.status === 201 || response.status === 200) {
@@ -35,7 +25,6 @@ const makeApiCall = async (endpoint, user, thunkAPI) => {
     return thunkAPI.rejectWithValue(error.response?.data.errors || "Unknown error");
   }
 };
-
 const registerUser = createAsyncThunk(
   'user/registerUser',
   async (user, thunkAPI) => makeApiCall('/auth', user, thunkAPI)

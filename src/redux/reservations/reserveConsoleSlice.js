@@ -1,13 +1,8 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { getToken } from "../../utils/localStorage";
+import { getToken, saveToken } from "../../utils/localStorage";
 import customApi from "../../utils/axios";
 
 const token = getToken();
-
-const headers = {
-  'Content-Type': 'application/json',
-  'Authorization': token
-};
 
 const createReservation = createAsyncThunk(
   "reserveConsole/createReservation",
@@ -15,14 +10,19 @@ const createReservation = createAsyncThunk(
     try {
       const response = await customApi.post(
         "/api/v1/reservations",
-        { headers },
+        { token },
         { reservation: reservation },
       );
+      const headers = response.headers;
+      const authorizationToken = headers.get('authorization')
+      const newToken = {
+        'authorization': authorizationToken,
+      }
 
       const data = await response.data;
-      console.log(data)
 
       if (response.status === 200) {
+        saveToken(newToken)
         return { reservation: data };
       }
     } catch (error) {
@@ -45,12 +45,17 @@ const deleteReservation = createAsyncThunk(
     try {
       const response = await customApi.delete(
         `/api/v1/reservations/${reservation_id}`,
-        { headers }
+        { token }
       );
 
       const data = await response.data;
-
+      const headers = response.headers;
+      const authorizationToken = headers.get('authorization')
+      const newToken = {
+        'authorization': authorizationToken,
+      }
       if (response.status === 200) {
+        saveToken(newToken)
         return { reservation: data };
       }
     } catch (error) {
