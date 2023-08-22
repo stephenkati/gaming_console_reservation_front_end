@@ -4,6 +4,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { useDispatch } from 'react-redux';
 import { createReservation } from '../../redux/reservations/reserveConsoleSlice';
+import { useState } from 'react';
 
 const ReserveConsole = () => {
   const dispatch = useDispatch();
@@ -51,8 +52,11 @@ const ReserveConsole = () => {
   };
 
   return (
-    <div className="w-full">
-      <h1>Reserve Console</h1>
+    <div className="w-full flex flex-col gap-4 text-center items-center justify-center h-full px-2 py-7">
+      <h1 className="font-bold tracking-widest text-xl border-b border-black border-solid inline-block pb-2 px-7">BOOK A CONSOLE RESERVATION</h1>
+
+      <p className="text-sm max-w-md">Try out the latest consoles and a variety of games. Whether it's for a special occasion or to explore new gaming horizons, renting a console gives you the flexibility, convenience, and excitement you're looking for. </p>
+
       <form className="flex flex-wrap w-max gap-1 justify-center">
         <input
           type="text"
@@ -60,10 +64,10 @@ const ReserveConsole = () => {
           value={city}
           onChange={(e) => {
             setCity(e.target.value);
-            setErrors({ ...errors, city: '' }); // Clear city error when input changes
+            setErrors({ ...errors, city: '' });
           }}
-          className={`border rounded p-2 w-1/3 focus:outline-none ${
-            errors.city ? 'border-red-500' : 'border-blue-500'
+          className={`border rounded-full p-2 w-1/3 focus:outline-none ${
+            errors.city ? 'border-red-500' : 'border-secondary'
           }`}
         />
         <DatePicker
@@ -71,15 +75,15 @@ const ReserveConsole = () => {
           onChange={handleDateChange}
           dateFormat="yyyy/MM/dd"
           placeholderText="mm/dd/yyyy"
-          className={`border rounded p-2 w-full focus:outline-none ${
-            errors.selectedDate ? 'border-red-500' : 'border-blue-500'
+          className={`border rounded-full p-2 w-full focus:outline-none ${
+            errors.selectedDate ? 'border-red-500' : 'border-secondary'
           }`}
         />
         <input
           type="submit"
           value="Reserve"
           onClick={handleSubmit}
-          className="bg-blue-500 text-white rounded p-2 cursor-pointer"
+          className="bg-secondary text-white rounded-full p-2 cursor-pointer"
         />
       </form>
     </div>
