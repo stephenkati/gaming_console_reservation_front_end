@@ -1,21 +1,18 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import customApi from '../../utils/axios';
-import { getToken } from '../../utils/localStorage';
+import { getToken, saveToken } from '../../utils/localStorage';
 
 const fetchUserReservations = createAsyncThunk(
   'user/fetchUserReservations',
   async (_, thunkAPI) => {
     try {
       const token = getToken();
-
       if (!token) {
         return thunkAPI.rejectWithValue('No authentication token found');
       }
 
       const response = await customApi.get('/api/v1/reservations', {
-        headers: {
-          Authorization: token,
-        },
+        headers: token
       });
 
       const reservations = await Promise.all(
@@ -25,7 +22,6 @@ const fetchUserReservations = createAsyncThunk(
           );
 
           const consoleData = consoleResponse.data;
-
           return {
             id: reservation.id,
             user_id: reservation.user_id,
@@ -35,6 +31,23 @@ const fetchUserReservations = createAsyncThunk(
           };
         })
       );
+      const headers = response.headers;
+      const client = headers.get('client');
+      const uid = headers.get('uid');
+      const tokenType = headers.get('token-type');
+      const authorizationToken = headers.get('authorization')
+      const oldToken = getToken()
+      const newToken = {
+        'access-token': oldToken['access-token'],
+        'client': client,
+        'uid': uid,
+        'expiry': oldToken.expiry,
+        'token-type': tokenType,
+        'authorization': authorizationToken,
+      }
+      if (response.status === 201 || response.status === 200) {
+        saveToken(newToken)
+      }
 
       return reservations;
     } catch (error) {
