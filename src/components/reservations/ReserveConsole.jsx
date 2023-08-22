@@ -1,19 +1,20 @@
 import { useParams } from 'react-router-dom';
-import { getUser } from '../../utils/localStorage';
+// import { getUser } from '../../utils/localStorage';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { createReservation } from '../../redux/reservations/reserveConsoleSlice';
 import { useState } from 'react';
 
 const ReserveConsole = () => {
   const dispatch = useDispatch();
   const { consoleId } = useParams();
-  const userId = getUser();
+  // const userId = getUser();
   const [selectedDate, setSelectedDate] = useState(null);
   const [formattedDate, setFormattedDate] = useState(null);
   const [city, setCity] = useState('');
   const [errors, setErrors] = useState({ city: '', selectedDate: '' });
+  const user = useSelector((state) => state.user.user);
 
   const handleDateChange = (date) => {
     setSelectedDate(date);
@@ -26,14 +27,15 @@ const ReserveConsole = () => {
   };
 
   const reservation = {
-    userId,
-    consoleId,
+    // userId: user && user.id,
+    console_id: consoleId,
     city,
     reserve_date: formattedDate,
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(user);
 
     let newErrors = { city: '', selectedDate: '' };
     if (!city) {
@@ -66,18 +68,16 @@ const ReserveConsole = () => {
             setCity(e.target.value);
             setErrors({ ...errors, city: '' });
           }}
-          className={`border rounded-full p-2 w-1/3 min-w-max focus:outline-none ${
-            errors.city ? 'border-red-500' : 'border-secondary'
-          }`}
+          className={`border rounded-full p-2 w-1/3 min-w-max focus:outline-none ${errors.city ? 'border-red-500' : 'border-secondary'
+            }`}
         />
         <DatePicker
           selected={selectedDate}
           onChange={handleDateChange}
           dateFormat="yyyy/MM/dd"
           placeholderText="mm/dd/yyyy"
-          className={`border rounded-full p-2 w-full focus:outline-none ${
-            errors.selectedDate ? 'border-red-500' : 'border-secondary'
-          }`}
+          className={`border rounded-full p-2 w-full focus:outline-none ${errors.selectedDate ? 'border-red-500' : 'border-secondary'
+            }`}
         />
         <input
           type="submit"

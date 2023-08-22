@@ -40,7 +40,7 @@ function ReservationList() {
         <span className="w-32 border-b-2 border-dashed border-gray-300 inline-block mt-4"></span>
       </header>
 
-      <div className="reservations_slider relative flex items-center py-8 px-16 md:px-12 lg:px-20 xl:px-32">
+      <div className="reservations_slider w-full relative flex items-center py-8 px-16 md:px-12 lg:px-20 xl:px-32">
         <Slider reservations={reservations} />
       </div>
     </div>

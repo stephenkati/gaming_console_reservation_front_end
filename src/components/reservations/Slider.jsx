@@ -44,7 +44,7 @@ function Slider({ reservations }) {
       slidesPerView={slidesPerView}
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}
-      className="static"
+      className="static w-full"
     >
       {reservations.map((reservation) => (
         <SwiperSlide key={reservation.id}>

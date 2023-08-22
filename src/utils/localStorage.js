@@ -1,17 +1,16 @@
-export const saveToken = (token, user) => {
-  localStorage.setItem('token', token);
-  localStorage.setItem('user', user);
+export const saveToken = (token) => {
+  localStorage.setItem('token', JSON.stringify(token));
 };
 
 export const getToken = () => {
-  return localStorage.getItem('token');
+  return JSON.parse(localStorage.getItem('token'));
 }
 
-export const getUser = () => {
-  return localStorage.getItem('user');
-};
+// export const getUser = () => {
+//   return localStorage.getItem('user');
+// };
 
 export const removeToken = () => {
   localStorage.removeItem('token');
-  localStorage.removeItem('user');
+  // localStorage.removeItem('user');
 }
