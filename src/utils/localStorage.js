@@ -6,11 +6,11 @@ export const getToken = () => {
   return JSON.parse(localStorage.getItem('token'));
 }
 
-export const getUser = () => {
-  return localStorage.getItem('user');
-};
+// export const getUser = () => {
+//   return localStorage.getItem('user');
+// };
 
 export const removeToken = () => {
   localStorage.removeItem('token');
-  localStorage.removeItem('user');
+  // localStorage.removeItem('user');
 }

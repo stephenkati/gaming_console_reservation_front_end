@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import customApi from '../../utils/axios';
-import { getToken, saveToken } from '../../utils/localStorage';
+import { getToken } from '../../utils/localStorage';
 
 const fetchUserReservations = createAsyncThunk(
   'user/fetchUserReservations',
@@ -31,23 +31,6 @@ const fetchUserReservations = createAsyncThunk(
           };
         })
       );
-      const headers = response.headers;
-      const client = headers.get('client');
-      const uid = headers.get('uid');
-      const tokenType = headers.get('token-type');
-      const authorizationToken = headers.get('authorization')
-      const oldToken = getToken()
-      const newToken = {
-        'access-token': oldToken['access-token'],
-        'client': client,
-        'uid': uid,
-        'expiry': oldToken.expiry,
-        'token-type': tokenType,
-        'authorization': authorizationToken,
-      }
-      if (response.status === 201 || response.status === 200) {
-        saveToken(newToken)
-      }
 
       return reservations;
     } catch (error) {
