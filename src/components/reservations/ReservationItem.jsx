@@ -1,11 +1,20 @@
+import  { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { deleteReservation } from '../../redux/reservations/reserveConsoleSlice';
 const ReservationItem = ({ reservation }) => {
   const dispatch = useDispatch();
+
+  const [reservationDeleted, setReservationDeleted] = useState(false);
+
   const handleDelete = (id) => {
     dispatch(deleteReservation(id));
+    setReservationDeleted(true);
   };
+
+  if (reservationDeleted) {
+    return null;
+  }
 
   return (
     <div key={reservation.id} className="rounded p-4 text-center w-full">

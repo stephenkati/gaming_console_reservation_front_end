@@ -73,7 +73,11 @@ const initialState = {
 const reserveConsoleSlice = createSlice({
   name: "reserveConsole",
   initialState,
-  reducers: {},
+  reducers: {
+    deleteRes: (state, action) => {
+      state.consoles.push(action.payload);
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(createReservation.pending, (state) => {
@@ -108,3 +112,4 @@ const reserveConsoleSlice = createSlice({
 
 export { createReservation, deleteReservation };
 export default reserveConsoleSlice.reducer;
+export const { deleteRes } = reserveConsoleSlice.actions;
