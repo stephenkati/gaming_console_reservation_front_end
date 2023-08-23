@@ -51,6 +51,8 @@ const ReserveConsole = () => {
     }
 
     await dispatch(createReservation(reservation));
+    setSelectedDate('')
+    setCity('')
   };
 
   return (
