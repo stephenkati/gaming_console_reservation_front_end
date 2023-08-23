@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 // import { getUser } from '../../utils/localStorage';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
@@ -8,6 +8,7 @@ import { useState } from 'react';
 
 const ReserveConsole = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { consoleId } = useParams();
   // const userId = getUser();
   const [selectedDate, setSelectedDate] = useState(null);
@@ -51,6 +52,7 @@ const ReserveConsole = () => {
     }
 
     await dispatch(createReservation(reservation));
+    navigate('/reservations');
   };
 
   return (
