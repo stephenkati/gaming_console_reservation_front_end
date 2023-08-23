@@ -44,8 +44,8 @@ const ConsoleItems = () => {
   return (
     <div className="flex flex-col w-full justify-around h-screen relative ">
       <div className="w-full flex flex-col items-center">
-        <h1 className="text-4xl font-bold">LATEST CONSOLES</h1>
-        <p className="text-lg">Please select a Console</p>
+        <h1 className="text-xl font-extrabold">LATEST CONSOLES</h1>
+        <p className="text-xs">Please select a Console</p>
       </div>
 
       <Swiper
