@@ -12,12 +12,12 @@ exports[`Consoles > should render consoles 1`] = `
           class="w-full flex flex-col items-center"
         >
           <h1
-            class="text-4xl font-bold"
+            class="text-xl font-extrabold"
           >
             LATEST CONSOLES
           </h1>
           <p
-            class="text-lg"
+            class="text-xs"
           >
             Please select a Console
           </p>
@@ -83,12 +83,12 @@ exports[`Consoles > should render consoles 1`] = `
         class="w-full flex flex-col items-center"
       >
         <h1
-          class="text-4xl font-bold"
+          class="text-xl font-extrabold"
         >
           LATEST CONSOLES
         </h1>
         <p
-          class="text-lg"
+          class="text-xs"
         >
           Please select a Console
         </p>
