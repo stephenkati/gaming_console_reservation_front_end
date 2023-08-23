@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { deleteReservation } from '../../redux/reservations/reserveConsoleSlice';
 const ReservationItem = ({ reservation }) => {
   const dispatch = useDispatch();
+
+  const [reservationDeleted, setReservationDeleted] = useState(false);
+
   const handleDelete = (id) => {
     dispatch(deleteReservation(id));
     setReservationDeleted(true);
