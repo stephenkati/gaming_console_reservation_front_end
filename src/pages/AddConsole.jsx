@@ -1,10 +1,7 @@
-import ConsoleForm from '../components/form/ConsoleForm'
-const AddConsole = () => {
-  return (
-    <div>
-      <ConsoleForm />
-    </div>
-  )
-}
+import ConsoleForm from '../components/consoles/ConsoleForm';
 
-export default AddConsole
+const AddConsole = () => {
+  return <ConsoleForm />;
+};
+
+export default AddConsole;

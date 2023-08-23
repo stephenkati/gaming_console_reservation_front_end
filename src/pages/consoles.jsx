@@ -1,4 +1,4 @@
-import ConsoleItems from '../components/ConsoleItems';
+import ConsoleItems from '../components/consoles/ConsoleItems';
 
 const Consoles = () => {
   return <ConsoleItems />;

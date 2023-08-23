@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { getConsoles } from '../redux/consoleSlice';
+import { getConsoles } from '../../redux/consoleSlice';
 import ConsoleItem from './ConsoleItem';
-import Slider from './slider/Slider';
+import Slider from '../slider/Slider';
 
 const ConsoleItems = () => {
   const dispatch = useDispatch();

@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { registerUser } from '../redux/userSlice';
+import { registerUser } from '../../redux/userSlice';
 import { useDispatch, useSelector } from 'react-redux';
 
-import bgImage from '../images/form-bg-desktop.jpg';
+import bgImage from '../../images/form-bg-desktop.jpg';
 
 const RegisterForm = () => {
   const [username, setUsername] = useState('');

@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
-import { logInUser } from '../redux/userSlice';
+import { logInUser } from '../../redux/userSlice';
 
-import bgImage from '../images/form-bg-desktop.jpg';
+import bgImage from '../../images/form-bg-desktop.jpg';
 
 const LoginForm = () => {
   const [username, setUsername] = useState('');
