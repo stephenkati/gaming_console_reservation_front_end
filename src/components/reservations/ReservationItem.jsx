@@ -25,7 +25,8 @@ const ReservationItem = ({ reservation }) => {
           className="object-cover rounded"
         />
       </div>
-      <h2 className="font-bold px-4 pt-2 pb-3 border-b border-b-2 border-dashed border-gray-300 inline-block">
+
+      <h2 className="font-bold px-4 pt-2 pb-3 border-b border-b-2 border-dashed border-gray-300 inline-block text-gray-700 text-lg">
         {reservation.console.name}
       </h2>
 
@@ -47,13 +48,13 @@ const ReservationItem = ({ reservation }) => {
       <button
         type="button"
         onClick={() => handleDelete(reservation.id)}
-        className="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded"
+        className="border border-lime-400 text-lime-500 hover:border-red-500 hover:bg-red-500 hover:text-white py-2 px-4 rounded mt-4"
       >
-        Delete
+        Cancel reservation
       </button>
     </div>
   );
-}
+};
 
 ReservationItem.propTypes = {
   reservation: PropTypes.object.isRequired,
