@@ -114,6 +114,31 @@ sh
 
 ## 👥 Authors <a name="authors"></a>
 
+👤 Author1
+ *[NALEDI DIKGALE]*
+ 
+- GitHub: [@githubhandle](https://github.com/Naledi-Dikgale)
+- Twitter: [@twitterhandle](https://twitter.com/ChichiTheStar)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/naledi-dikgale-068423159/)
+- Website: https://naledi-dikgale.github.io/mobile-portfolio/
+
+👤 Author2
+*[Stephen Katuli]*
+ 
+- GitHub: [@githubhandle](https://github.com/stephenkati)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/stephen-katuli/)
+
+👤 Author3
+*[Miles Mosweu]*
+
+- GitHub: [@Timbar09](https://github.com/Timbar09)
+- Twitter: [@Milez09](https://twitter.com/Milez09)
+- LinkedIn: [@miles-mosweu09](https://www.linkedin.com/in/miles-mosweu09)
+
+👤 Author4
+*[Yacoubou Seidou]*
+- GitHub: [@Yacoubou-seidou](https://github.com/Yacoubou-seidou)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
