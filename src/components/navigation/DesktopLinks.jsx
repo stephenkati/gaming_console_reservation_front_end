@@ -17,7 +17,7 @@ function DesktopLinks() {
         <li key={link.path}>
           <Link
             to={link.path}
-            className={`py-2 px-4 hover:bg-lime-400 w-full inline-block font-semibold ${
+            className={`py-2 px-4 hover:bg-gray-100 w-full inline-block font-semibold ${
               location.pathname === link.path ? 'bg-lime-400' : ''
             }`}
           >
