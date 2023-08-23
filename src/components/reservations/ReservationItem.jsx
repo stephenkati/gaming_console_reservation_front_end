@@ -1,10 +1,8 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { deleteReservation } from '../../redux/reservations/reserveConsoleSlice';
-
 const ReservationItem = ({ reservation }) => {
   const dispatch = useDispatch();
-
   const handleDelete = (id) => {
     dispatch(deleteReservation(id));
   };
