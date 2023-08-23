@@ -1,10 +1,7 @@
-import ConsoleItems from "../components/ConsoleItems";
-
+import ConsoleItems from '../components/ConsoleItems';
 
 const Consoles = () => {
-  return (
-    <div><ConsoleItems /></div>
-  )
-}
+  return <ConsoleItems />;
+};
 
 export default Consoles;

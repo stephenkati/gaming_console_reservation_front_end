@@ -6,8 +6,8 @@ import MenuCloseIcon from './MenuCloseIcon';
 
 const links = [
   { path: '/', text: 'Consoles' },
-  { path: '/reservations', text: 'My reservations' },
-  { path: '/new', text: 'Add a new console' },
+  { path: '/reservations', text: 'Reservations' },
+  { path: '/consoles/new', text: 'Add new console' },
 ];
 
 function handleMenuClick() {

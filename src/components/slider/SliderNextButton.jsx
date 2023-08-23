@@ -6,7 +6,7 @@ function SliderNextButton() {
   return (
     <button
       onClick={() => swiper.slideNext()}
-      className="absolute top-1/2 right-0 transform -translate-y-1/2 z-10 bg-gray-200 text-white flex justify-start items-center md:w-12 lg:w-20 py-3 pl-4 rounded-l-full hover:bg-lime-400 xl:rounded-full"
+      className="absolute top-1/2 right-0 transform -translate-y-1/2 z-10 bg-gray-200 text-white flex justify-start items-center md:w-12 lg:w-20 py-3 pl-4 rounded-l-full hover:bg-lime-400"
     >
       <span>
         <svg

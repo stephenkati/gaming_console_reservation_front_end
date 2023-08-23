@@ -1,9 +1,11 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
+import ReservationItem from './ReservationItem';
+
 import { fetchUserReservations } from '../../redux/reservations/reservationsSlice';
 
-import Slider from './Slider';
+import Slider from '../slider/Slider';
 
 function ReservationList() {
   const dispatch = useDispatch();
@@ -60,8 +62,8 @@ function ReservationList() {
         <span className="w-32 border-b-2 border-dashed border-gray-300 inline-block mt-4"></span>
       </header>
 
-      <div className="reservations_slider w-full relative flex items-center py-8 px-16 md:px-12 lg:px-20 xl:px-32">
-        <Slider reservations={reservations} />
+      <div className="w-full relative flex items-center py-4 px-16 md:px-12 lg:px-20 xl:px-32">
+        <Slider storedData={reservations} Component={ReservationItem} />
       </div>
     </div>
   );
