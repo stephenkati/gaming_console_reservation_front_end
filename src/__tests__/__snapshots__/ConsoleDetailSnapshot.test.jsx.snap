@@ -1,0 +1,67 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ConsoleDetail > matches snapshot 1`] = `
+<div>
+  <div
+    class="flex flex-col items-center justify-center h-full"
+  >
+    <div
+      class="flex w-full justify-between items-center"
+    >
+      <div
+        class="w-3/5"
+      >
+        <img
+          alt="SEGA"
+          class="w-full h-auto"
+          src="linktoImage.png"
+        />
+      </div>
+      <div
+        class="flex flex-col w-2/5 px-6"
+      >
+        <div>
+          <p
+            class="text-lg font-bold p-1"
+          >
+            SEGA
+          </p>
+          <p
+            class=" text-xs p-1"
+          >
+            A good one
+          </p>
+          <p
+            class="text-md bg-secondary p-1"
+          >
+            Purchase Price: 
+            10
+             $
+          </p>
+          <p
+            class="text-md p-1"
+          >
+            Rental Price: 
+            4
+             $
+          </p>
+        </div>
+        <div
+          class="flex flex-col w-full justify-center items-center"
+        >
+          <a
+            href="/reserve/1"
+          >
+            <button
+              class="w-full bg-secondary text-primary rounded-lg p-2 mt-3"
+              type="button"
+            >
+              Reserve
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
