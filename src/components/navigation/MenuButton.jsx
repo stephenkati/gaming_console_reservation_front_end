@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-function MenuButton({ onClick, icon }) {
+const MenuButton = ({ onClick, icon }) => {
   return (
     <span
       className="inline-block lg:hidden cursor-pointer p-1 hover:bg-gray-200 rounded active:bg-gray-300"
@@ -9,7 +9,7 @@ function MenuButton({ onClick, icon }) {
       {icon}
     </span>
   );
-}
+};
 
 MenuButton.propTypes = {
   onClick: PropTypes.func.isRequired,

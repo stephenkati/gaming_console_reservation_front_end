@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 import Navbar from './navigation/Navbar';
 import Footer from './Footer';
 
-function Layout() {
+const Layout = () => {
   return (
     <div className="layout flex flex-col lg:flex-row min-h-screen">
       <Navbar />
@@ -17,6 +17,6 @@ function Layout() {
       </footer>
     </div>
   );
-}
+};
 
 export default Layout;

@@ -11,12 +11,12 @@ const links = [
   { path: '/consoles/delete', text: 'Delete Console' },
 ];
 
-function handleMenuClick() {
+const handleMenuClick = () => {
   const menu = document.querySelector('#menu');
   menu.classList.toggle('hidden');
-}
+};
 
-function MobileMenu() {
+const MobileMenu = () => {
   return (
     <div
       className="absolute top-0 right-0 w-full text-left bg-gray-100 px-4 pt-4 pb-8 lg:hidden hidden shadow-lg"
@@ -41,6 +41,6 @@ function MobileMenu() {
       </ul>
     </div>
   );
-}
+};
 
 export default MobileMenu;

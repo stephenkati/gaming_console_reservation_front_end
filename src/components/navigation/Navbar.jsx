@@ -12,7 +12,7 @@ const handleMenuClick = () => {
   menu.classList.toggle('hidden');
 };
 
-function Navbar() {
+const Navbar = () => {
   return (
     <nav className="flex justify-between items-center p-4 relative lg:h-screen lg:flex-col lg:justify-space-between lg:items-start lg:pr-0 flex-0.5 z-20">
       <MenuButton onClick={handleMenuClick} icon={<MenuOpenIcon />} />
@@ -32,6 +32,6 @@ function Navbar() {
       </footer>
     </nav>
   );
-}
+};
 
 export default Navbar;

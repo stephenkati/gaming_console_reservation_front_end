@@ -7,7 +7,7 @@ import { fetchUserReservations } from '../../redux/reservations/reservationsSlic
 
 import Slider from '../slider/Slider';
 
-function ReservationList() {
+const ReservationList = () => {
   const dispatch = useDispatch();
   const { reservations, isLoading, error } = useSelector(
     (state) => state.reservations
@@ -67,6 +67,6 @@ function ReservationList() {
       </div>
     </div>
   );
-}
+};
 
 export default ReservationList;

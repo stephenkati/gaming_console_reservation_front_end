@@ -11,7 +11,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
-function Slider({ Component, storedData }) {
+const Slider = ({ Component, storedData }) => {
   const [slidesPerView, setSlidesPerView] = useState(3);
 
   const handleResize = () => {
@@ -25,13 +25,10 @@ function Slider({ Component, storedData }) {
   };
 
   useEffect(() => {
-    // Call handleResize when the component mounts
     handleResize();
 
-    // Add resize event listener
     window.addEventListener('resize', handleResize);
 
-    // Clean up the event listener when the component unmounts
     return () => {
       window.removeEventListener('resize', handleResize);
     };
@@ -51,12 +48,11 @@ function Slider({ Component, storedData }) {
         </SwiperSlide>
       ))}
 
-      {/* Custom buttons */}
       <SliderPrevButton />
       <SliderNextButton />
     </Swiper>
   );
-}
+};
 
 Slider.propTypes = {
   storedData: PropTypes.array.isRequired,

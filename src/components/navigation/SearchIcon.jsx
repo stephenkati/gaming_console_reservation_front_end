@@ -1,4 +1,4 @@
-function SearchIcon() {
+const SearchIcon = () => {
   return (
     <span className="inline-block lg:hidden cursor-pointer py-2 px-3 rounded bg-gray-700 text-white hover:bg-gray-600 active:bg-gray-800">
       <svg
@@ -17,6 +17,6 @@ function SearchIcon() {
       </svg>
     </span>
   );
-}
+};
 
 export default SearchIcon;

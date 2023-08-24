@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { CiFacebook, CiTwitter, CiInstagram } from 'react-icons/ci';
 
-function ConsoleItem({ data }) {
+const ConsoleItem = ({ data }) => {
   return (
     <Link
       to={`/console/${data.id}`}
@@ -34,7 +34,7 @@ function ConsoleItem({ data }) {
       </div>
     </Link>
   );
-}
+};
 
 ConsoleItem.propTypes = {
   data: PropTypes.object.isRequired,

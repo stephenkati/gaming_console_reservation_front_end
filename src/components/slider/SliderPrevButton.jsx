@@ -1,6 +1,6 @@
 import { useSwiper } from 'swiper/react';
 
-function SliderPrevButton() {
+const SliderPrevButton = () => {
   const swiper = useSwiper();
 
   return (
@@ -26,6 +26,6 @@ function SliderPrevButton() {
       </span>
     </button>
   );
-}
+};
 
 export default SliderPrevButton;

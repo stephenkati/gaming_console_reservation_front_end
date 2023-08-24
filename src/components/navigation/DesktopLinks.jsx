@@ -9,7 +9,7 @@ const links = [
   { path: '/consoles/delete', text: 'Delete Console' },
 ];
 
-function DesktopLinks() {
+const DesktopLinks = () => {
   const location = useLocation();
 
   return (
@@ -31,6 +31,6 @@ function DesktopLinks() {
       </li>
     </ul>
   );
-}
+};
 
 export default DesktopLinks;
