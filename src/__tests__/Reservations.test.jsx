@@ -37,7 +37,10 @@ describe('ReservationList', () => {
 
     render(
       <Provider store={store}>
-        <ReservationList reservations={reservations} />
+        <ReservationList
+          storedData={reservations}
+          Component={ReservationItem}
+        />
       </Provider>
     );
 
@@ -63,7 +66,7 @@ describe('ReservationItem', () => {
 
     render(
       <Provider store={store}>
-        <ReservationItem reservation={reservation} />
+        <ReservationItem data={reservation} />
       </Provider>
     );
 

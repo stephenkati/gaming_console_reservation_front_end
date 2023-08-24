@@ -4,7 +4,7 @@ import '@testing-library/jest-dom';
 import { Provider } from 'react-redux';
 import store from '../redux/store';
 import { describe, test, expect } from 'vitest';
-import ConsoleItems from '../components/ConsoleItems';
+import ConsoleItems from '../components/consoles/ConsoleItems';
 
 describe('Consoles', () => {
   test('should render consoles', () => {

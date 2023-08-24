@@ -21,7 +21,8 @@ const ConsoleItems = () => {
         </h1>
 
         <p className="font-semi-bold">
-          Please select a console to see more details
+          Please select a console to see more details about it and to reserve
+          it.
         </p>
         <span className="w-32 border-b-2 border-dashed border-gray-300 inline-block mt-4"></span>
       </header>
