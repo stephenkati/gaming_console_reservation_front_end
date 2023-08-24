@@ -67,40 +67,47 @@ In order to run this project you need a web browser.
 
 Clone this repository to your desired folder:
 
-sh
+```
   cd Gaming-console-reservation-frontend
   git clone https://github.com/stephenkati/gaming_console_reservation_front_end.git
+```
 
 ### Install
 
 Install this project with:
 
-sh
+```
   cd Gaming-console-reservation-frontend
-  # npm install
-sh
+  npm install
+```
+```
   npm install --save-dev eslint@7.x eslint-config-airbnb@18.x eslint-plugin-import@2.x eslint-plugin-jsx-a11y@6.x eslint-plugin-react@7.x eslint-plugin-react-hooks@4.x @babel/eslint-parser@7.x @babel/core@7.x  @babel/plugin-syntax-jsx@7.x @babel/preset-env@7.x  @babel/preset-react@7.x
-sh
+```
+```
   npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x
+```
 
 ### Usage
 
 To run the project, execute the following command:
 
-sh
-  # npm start
+```
+  npm start
+```
 
 ### Run tests
 
 To run tests, run the following command:
 
-sh
-  # npm test
-
-sh
+```
+npm test
+```
+```
   npx eslint "**/*.{js,jsx}" --fix
-sh
+```
+```
   npx stylelint "**/*.{css,scss}" --fix
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
