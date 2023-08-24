@@ -6,6 +6,7 @@ const links = [
   { path: '/', text: 'Consoles' },
   { path: '/reservations', text: 'Reservations' },
   { path: '/consoles/new', text: 'Add new console' },
+  { path: '/consoles/delete', text: 'Delete Console' },
 ];
 
 function DesktopLinks() {
