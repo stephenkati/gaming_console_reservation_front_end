@@ -5,10 +5,10 @@ import Register from './pages/register';
 import Login from './pages/login';
 import AddConsole from './pages/AddConsole';
 
-import ProtectedRoutes from './components/protetedRoutes';
+import ProtectedRoutes from './components/users/protetedRoutes';
 import Layout from './components/Layout';
 import Reservations from './pages/Reservations';
-import ConsoleDetail from './components/details/ConsoleDetail';
+import ConsoleDetail from './components/consoles/ConsoleDetail';
 
 import store from './redux/store';
 import './App.css';
@@ -32,7 +32,7 @@ const App = () => {
               <Route path="/" element={<Consoles />} />
               <Route path="/console/:id" element={<ConsoleDetail />} />
               <Route path="/reservations" element={<Reservations />} />
-              <Route path="/new" element={<AddConsole />} />
+              <Route path="/consoles/new" element={<AddConsole />} />
               <Route path="/reserve/:consoleId" element={<ReserveConsole />} />
             </Route>
             <Route path="/register" element={<Register />} />

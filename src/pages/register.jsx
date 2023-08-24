@@ -1,9 +1,5 @@
-import RegisterForm from '../components/register';
+import RegisterForm from '../components/users/register';
 
-const Register = () => (
-  <div className="flex items-center justify-center h-screen">
-    <RegisterForm />
-  </div>
-);
+const Register = () => <RegisterForm />;
 
 export default Register;

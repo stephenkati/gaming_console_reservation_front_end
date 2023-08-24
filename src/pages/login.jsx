@@ -1,9 +1,5 @@
-import LoginForm from '../components/login';
+import LoginForm from '../components/users/login';
 
-const Login = () => (
-  <div className="flex items-center justify-center h-screen">
-    <LoginForm />
-  </div>
-);
+const Login = () => <LoginForm />;
 
 export default Login;

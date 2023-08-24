@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 
 import { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import ReservationItem from './ReservationItem';
 
 import SliderNextButton from './SliderNextButton';
 import SliderPrevButton from './SliderPrevButton';
@@ -12,7 +11,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
-function Slider({ reservations }) {
+function Slider({ Component, storedData }) {
   const [slidesPerView, setSlidesPerView] = useState(3);
 
   const handleResize = () => {
@@ -44,11 +43,11 @@ function Slider({ reservations }) {
       slidesPerView={slidesPerView}
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}
-      className="static w-full"
+      className="static w-full py-4"
     >
-      {reservations.map((reservation) => (
-        <SwiperSlide key={reservation.id}>
-          <ReservationItem reservation={reservation} />
+      {storedData.map((data) => (
+        <SwiperSlide key={data.id}>
+          <Component data={data} />
         </SwiperSlide>
       ))}
 
@@ -60,7 +59,8 @@ function Slider({ reservations }) {
 }
 
 Slider.propTypes = {
-  reservations: PropTypes.array.isRequired,
+  storedData: PropTypes.array.isRequired,
+  Component: PropTypes.elementType.isRequired,
 };
 
 export default Slider;
