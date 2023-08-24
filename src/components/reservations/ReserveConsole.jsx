@@ -74,11 +74,11 @@ const ReserveConsole = () => {
         }}
       >
         <div className="w-full flex flex-col gap-4 text-center text-gray-300 items-center justify-center h-full px-2 py-4">
-          <h1 className="font-semi-bold text-xl text-white border-b border-white border-solid inline-block pb-2 px-7">
-            Book a reservation
+          <h1 className="font-bold text-xl text-white border-b border-white border-solid inline-block pb-2 px-7 tracking-widest">
+            BOOK A RESERVATION
           </h1>
 
-          <p className="text-sm max-w-md">
+          <p className="text-sm max-w-md text-white">
             Try out the latest consoles and a variety of games. Whether
             it&apos;s for a special occasion or to explore new gaming horizons,
             renting a console gives you the flexibility, convenience, and
@@ -94,7 +94,7 @@ const ReserveConsole = () => {
                 setCity(e.target.value);
                 setErrors({ ...errors, city: '' });
               }}
-              className={`border rounded-full py-2 px-4 w-1/3 min-w-max focus:outline-none ${
+              className={`text-black border rounded-full py-2 px-4 w-1/3 min-w-max focus:outline-none ${
                 errors.city ? 'border-red-500' : 'border-secondary'
               }`}
             />
@@ -103,7 +103,7 @@ const ReserveConsole = () => {
               onChange={handleDateChange}
               dateFormat="yyyy/MM/dd"
               placeholderText="mm/dd/yyyy"
-              className={`border rounded-full py-2 px-4 w-full focus:outline-none ${
+              className={`text-black border rounded-full py-2 px-4 w-full focus:outline-none ${
                 errors.selectedDate ? 'border-red-500' : 'border-secondary'
               }`}
             />
