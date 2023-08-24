@@ -21,7 +21,6 @@
 - [:question: FAQ](#faq)
 - [:memo: License](#license)
 
-<!-- PROJECT DESCRIPTION -->
 # 📖 [Gaming-console-reservation-frontend] <a name="about-project"></a>
 
 [Gaming-console-reservation-frontend] is a frontend react app for our Gaming consoles rental backend. It shows the features of the app and provides a user with better experience and interface
