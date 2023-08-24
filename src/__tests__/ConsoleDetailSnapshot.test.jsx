@@ -3,7 +3,7 @@ import { MemoryRouter, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
 import { describe, test, expect } from 'vitest'; // Importing from vitest
-import ConsoleDetail from '../components/details/ConsoleDetail';
+import ConsoleDetail from '../components/consoles/ConsoleDetail';
 
 const mockStore = configureStore([]);
 
