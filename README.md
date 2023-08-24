@@ -21,7 +21,6 @@
 - [:question: FAQ](#faq)
 - [:memo: License](#license)
 
-<!-- PROJECT DESCRIPTION -->
 # 📖 [Gaming-console-reservation-frontend] <a name="about-project"></a>
 
 [Gaming-console-reservation-frontend] is a frontend react app for our Gaming consoles rental backend. It shows the features of the app and provides a user with better experience and interface
@@ -46,8 +45,6 @@
   </ul>
 </details>
 
-<!-- Features -->
-
 ### Key Features <a name="key-features"></a>
 
 - [Render Gaming consoles]
@@ -57,7 +54,6 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -65,9 +61,7 @@ To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need:
-
-<!-- -  -->
+In order to run this project you need a web browser.
 
 ### Setup
 
@@ -110,8 +104,6 @@ sh
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- AUTHORS -->
-
 ## 👥 Authors <a name="authors"></a>
 
 👤 Author1
@@ -144,15 +136,11 @@ sh
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FUTURE FEATURES -->
-
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [] [Laptop Rentals]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
 
@@ -161,15 +149,11 @@ Feel free to check the [issues page](https://github.com/stephenkati/gaming_conso
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- SUPPORT -->
-
 ## ⭐️ Show your support <a name="support"></a>
 
 If you like this project please show support by staring :star:️.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏Acknowledgments <a name="acknowledgements"></a>
 
@@ -178,8 +162,6 @@ If you like this project please show support by staring :star:️.
 * We would like to thank [Murat Korkmaz](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign) for this beautiful design.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
