@@ -14,6 +14,7 @@ import store from './redux/store';
 import './App.css';
 import Consoles from './pages/consoles';
 import ReserveConsole from './components/reservations/ReserveConsole';
+import DeleteConsoles from './pages/DeleteConsoles';
 
 const App = () => {
   return (
@@ -34,6 +35,7 @@ const App = () => {
               <Route path="/reservations" element={<Reservations />} />
               <Route path="/consoles/new" element={<AddConsole />} />
               <Route path="/reserve/:consoleId" element={<ReserveConsole />} />
+              <Route path="/consoles/delete" element={<DeleteConsoles />} />
             </Route>
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
