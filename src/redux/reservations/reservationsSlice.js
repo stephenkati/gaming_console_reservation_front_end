@@ -12,7 +12,7 @@ const fetchUserReservations = createAsyncThunk(
       }
 
       const response = await customApi.get('/api/v1/reservations', {
-        headers: token
+        headers: token,
       });
 
       const reservations = await Promise.all(
