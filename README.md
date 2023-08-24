@@ -138,7 +138,8 @@ sh
 👤 Author4
 *[Yacoubou Seidou]*
 - GitHub: [@Yacoubou-seidou](https://github.com/Yacoubou-seidou)
-
+- Linkedin: [Linkedin](https://www.linkedin.com/in/yacoubou-seidou-chaibou)
+- Website: https://yacoubou-seidou-portfolio.vercel.app/
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
