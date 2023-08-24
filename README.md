@@ -169,8 +169,6 @@ If you like this project please show support by staring :star:️.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ACKNOWLEDGEMENTS -->
-
 ## 🙏Acknowledgments <a name="acknowledgements"></a>
 
 * WE would like to thank Microverse for providing adequate learning material.
