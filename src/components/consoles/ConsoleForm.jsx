@@ -44,7 +44,7 @@ const ConsoleForm = () => {
 
   return (
     <div
-      className="h-[90vh] overflow-hidden bg-cover bg-no-repeat p-2 text-center relative"
+      className="lg:h-screen h-[90vh] overflow-hidden bg-cover bg-no-repeat p-2 text-center relative"
       style={{
         backgroundImage: `url(${bgImage})`,
       }}
@@ -130,7 +130,7 @@ const ConsoleForm = () => {
 
               {disabled ? (
                 <div>
-                  <div className="bg-white text-black rounded-full py-3 px-4 grid place-items-center w-full">
+                  <div className="bg-white text-lime-700 rounded-full py-3 px-4 grid place-items-center w-full">
                     <div role="status" className="flex items-center">
                       <svg
                         aria-hidden="true"
@@ -148,7 +148,7 @@ const ConsoleForm = () => {
                           fill="currentFill"
                         />
                       </svg>
-                      <span className="text-white text-xs flex-1 w-max">
+                      <span className="text-lime-700 text-xs flex-1 w-max">
                         Adding Console...
                       </span>
                     </div>
