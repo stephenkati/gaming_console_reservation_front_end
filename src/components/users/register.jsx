@@ -82,7 +82,7 @@ const RegisterForm = () => {
           <form className="flex flex-col gap-4 p-2">
             {error && <p className="text-red-500">{error}</p>}
 
-            <div className="flex flex-col gap-4 md:flex-row md:align-center md:gap-0">
+            <div className="flex flex-col gap-4 md:flex-row md:align-center md:gap-1">
               <div className="flex-1">
                 <input
                   type="text"
@@ -91,7 +91,7 @@ const RegisterForm = () => {
                   onChange={(e) => setUsername(e.target.value)}
                   required
                   aria-label="Username"
-                  className="w-full bg-primary text-black rounded-full py-2 px-4 md:rounded-r-none md:rounded-l-full"
+                  className="w-full bg-gray-100 bg-opacity-20 border border-white text-white rounded-full py-2 px-4 md:rounded-r-none md:rounded-l-full placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-lime-400 focus:border-transparent focus:bg-lime-400 focus:bg-opacity-20"
                 />
                 {errors.username && (
                   <p className="text-red-500">{errors.username}</p>
@@ -106,13 +106,13 @@ const RegisterForm = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   required
                   aria-label="Email"
-                  className="w-full bg-primary text-black rounded-full py-2 px-4 md:rounded-l-none md:rounded-r-full"
+                  className="w-full bg-gray-100 bg-opacity-20 border border-white text-white rounded-full py-2 px-4 md:rounded-l-none md:rounded-r-full placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-lime-400 focus:border-transparent focus:bg-lime-400 focus:bg-opacity-20"
                 />
                 {errors.email && <p className="text-red-500">{errors.email}</p>}
               </div>
             </div>
 
-            <div className="flex flex-col gap-4 md:flex-row md:align-center md:gap-0">
+            <div className="flex flex-col gap-4 md:flex-row md:align-center md:gap-1">
               <div className="flex-1">
                 <input
                   type="password"
@@ -121,7 +121,7 @@ const RegisterForm = () => {
                   onChange={(e) => setPassword(e.target.value)}
                   required
                   aria-label="Password"
-                  className="w-full bg-primary text-black rounded-full py-2 px-4 md:rounded-r-none md:rounded-l-full"
+                  className="w-full bg-gray-100 bg-opacity-20 border border-white text-white rounded-full py-2 px-4 md:rounded-r-none md:rounded-l-full placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-lime-400 focus:border-transparent focus:bg-lime-400 focus:bg-opacity-20"
                 />
                 {errors.password && (
                   <p className="text-red-500">{errors.password}</p>
@@ -136,7 +136,7 @@ const RegisterForm = () => {
                   onChange={(e) => setConfirmPassword(e.target.value)}
                   required
                   aria-label="Confirm Password"
-                  className="w-full bg-primary text-black rounded-full py-2 px-4 md:rounded-l-none md:rounded-r-full"
+                  className="w-full bg-gray-100 bg-opacity-20 border border-white text-white rounded-full py-2 px-4 md:rounded-l-none md:rounded-r-full placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-lime-400 focus:border-transparent focus:bg-lime-400 focus:bg-opacity-20"
                 />
                 {errors.confirmPassword && (
                   <p className="text-red-500">{errors.confirmPassword}</p>
@@ -146,7 +146,7 @@ const RegisterForm = () => {
 
             {isLoading ? (
               <div>
-                <div className="border border-white rounded-full py-3 px-4 grid place-items-center w-full">
+                <div className="bg-white rounded-full py-3 px-4 grid place-items-center w-full">
                   <div role="status" className="flex items-center">
                     <svg
                       aria-hidden="true"
@@ -164,7 +164,7 @@ const RegisterForm = () => {
                         fill="currentFill"
                       />
                     </svg>
-                    <span className="text-white text-xs flex-1 w-max">
+                    <span className="text-lime-700 text-xs flex-1 w-max">
                       Signing in...
                     </span>
                   </div>
@@ -176,7 +176,7 @@ const RegisterForm = () => {
                   type="button"
                   onClick={handleSubmit}
                   disabled={isLoading}
-                  className="w-full md:w-auto border border-white text-white rounded-full py-2 px-6 hover:bg-white hover:text-lime-500"
+                  className="w-full md:w-auto rounded-full py-2 px-6 bg-white text-lime-700 hover:bg-gray-200"
                 >
                   Sign up
                 </button>
