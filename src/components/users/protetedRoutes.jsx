@@ -8,7 +8,7 @@ const ProtectedRoutes = ({ children }) => {
   const token = getToken();
   const isAuthenticatedPersisted = isAuthenticated || !!token;
   if (!isAuthenticatedPersisted) {
-    return <Navigate to="/login" />;
+    return <Navigate to="/welcome" />;
   }
 
   return children;
