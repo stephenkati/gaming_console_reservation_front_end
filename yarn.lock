@@ -1714,8 +1714,8 @@ csstype@^3.0.2:
   resolved "https://registry.npmjs.org/csstype/-/csstype-3.1.2.tgz"
   integrity sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==
 
-daisyui@^3.0.22, daisyui@^3.4.0:
-  version "3.5.1"
+daisyui@^3.0.22, daisyui@3.4.0:
+  version "3.4.0"
   resolved "https://registry.npmjs.org/daisyui/-/daisyui-3.5.1.tgz"
   integrity sha512-7GG+9QXnr2qQMCqnyFU8TxpaOYJigXiEtmzoivmiiZZHvxqIwYdaMAkgivqTVxEgy3Hot3m1suzZjmt1zUrvmA==
   dependencies:
