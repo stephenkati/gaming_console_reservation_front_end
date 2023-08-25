@@ -44,7 +44,7 @@ const ConsoleForm = () => {
 
   return (
     <div
-      className="h-screen overflow-hidden bg-cover bg-no-repeat p-12 text-center relative"
+      className="h-[90vh] overflow-hidden bg-cover bg-no-repeat p-2 text-center relative"
       style={{
         backgroundImage: `url(${bgImage})`,
       }}
@@ -60,13 +60,13 @@ const ConsoleForm = () => {
             Add a New Console
           </h2>
 
-          <form className="p-2 flex flex-col gap-4" onSubmit={handleSubmit}>
-            <div className="flex flex-col gap-4 md:flex-row md:align-center md:gap-0">
+          <form className="p-2 flex flex-col gap-3" onSubmit={handleSubmit}>
+            <div className="flex flex-col gap-4 md:flex-row md:align-center md:gap-1">
               <div className="flex-1">
                 <input
                   required
                   id="name"
-                  className="w-full bg-primary text-black rounded-full py-2 px-4 md:rounded-r-none md:rounded-l-full"
+                  className="w-full bg-gray-100 bg-opacity-20 border border-white text-white rounded-full py-2 px-4 md:rounded-r-none md:rounded-l-full placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-lime-400 focus:border-transparent focus:bg-lime-400 focus:bg-opacity-20"
                   type="text"
                   placeholder="Enter Console Name"
                   value={consoleName}
@@ -78,7 +78,7 @@ const ConsoleForm = () => {
               <div className="flex-1">
                 <input
                   required
-                  className="w-full bg-primary text-black rounded-full py-2 px-4 md:rounded-l-none md:rounded-r-full"
+                  className="w-full bg-gray-100 bg-opacity-20 border border-white text-white rounded-full py-2 px-4 md:rounded-l-none md:rounded-r-full placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-lime-400 focus:border-transparent focus:bg-lime-400 focus:bg-opacity-20"
                   id="purchasePrice"
                   type="number"
                   value={purchasePrice}
@@ -89,39 +89,36 @@ const ConsoleForm = () => {
               </div>
             </div>
 
-            <div className="flex flex-col gap-4 md:flex-row md:align-center md:gap-0">
-              <div className="flex-1">
-                <input
-                  required
-                  className="w-full bg-primary text-black rounded-full py-2 px-4 md:rounded-r-none md:rounded-l-full"
-                  id="rentalPrice"
-                  type="number"
-                  value={rentalPrice}
-                  placeholder="Enter Rental Price"
-                  aria-label="Rental Price"
-                  onChange={(e) => setRentalPrice(e.target.value)}
-                />
-              </div>
-
-              <div>
-                <input
-                  required
-                  className="w-full bg-primary text-black rounded-full py-2 px-4 md:rounded-l-none md:rounded-r-full"
-                  id="description"
-                  type="text"
-                  value={description}
-                  placeholder="Enter Console Description"
-                  aria-label="Console Description"
-                  onChange={(e) => setDescription(e.target.value)}
-                />
-              </div>
+            <div>
+              <input
+                required
+                className="w-full bg-gray-100 bg-opacity-20 border border-white text-white rounded-full py-2 px-4 placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-lime-400 focus:border-transparent focus:bg-lime-400 focus:bg-opacity-20"
+                id="rentalPrice"
+                type="number"
+                value={rentalPrice}
+                placeholder="Enter Rental Price"
+                aria-label="Rental Price"
+                onChange={(e) => setRentalPrice(e.target.value)}
+              />
             </div>
 
-            <div className="w-full flex flex-col gap-4 md:flex-row md:align-center">
+            <div>
+              <textarea
+                required
+                className="w-full bg-gray-100 bg-opacity-20 border border-white text-white rounded-xl py-2 px-4 placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-lime-400 focus:border-transparent focus:bg-lime-400 focus:bg-opacity-20 h-20 resize-none"
+                id="description"
+                value={description}
+                placeholder="Enter Console Description"
+                aria-label="Console Description"
+                onChange={(e) => setDescription(e.target.value)}
+              ></textarea>
+            </div>
+
+            <div className="w-full flex flex-col gap-3 md:flex-row md:align-center">
               <div className="w-full">
                 <input
                   required
-                  className="w-full bg-primary text-black rounded-full border py-2 px-4"
+                  className="w-full bg-gray-100 bg-opacity-20 border border-white text-white rounded-full py-2 px-4 placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-lime-400 focus:border-transparent focus:bg-lime-400 focus:bg-opacity-20"
                   id="photo"
                   type="text"
                   value={consolePhoto}
@@ -133,7 +130,7 @@ const ConsoleForm = () => {
 
               {disabled ? (
                 <div>
-                  <div className="border border-white rounded-full py-3 px-4 grid place-items-center w-full">
+                  <div className="bg-white text-black rounded-full py-3 px-4 grid place-items-center w-full">
                     <div role="status" className="flex items-center">
                       <svg
                         aria-hidden="true"
@@ -162,7 +159,7 @@ const ConsoleForm = () => {
                   <button
                     type="submit"
                     disabled={disabled}
-                    className="w-full md:w-max border border-white text-white rounded-full py-2 px-6 hover:bg-white hover:text-lime-500"
+                    className="w-full md:w-max bg-white text-lime-700 rounded-full py-2 px-6 hover:bg-gray-200"
                   >
                     Add Console
                   </button>

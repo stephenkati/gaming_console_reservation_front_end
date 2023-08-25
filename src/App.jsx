@@ -15,6 +15,7 @@ import './App.css';
 import Consoles from './pages/consoles';
 import ReserveConsole from './components/reservations/ReserveConsole';
 import DeleteConsoles from './pages/DeleteConsoles';
+import Welcome from './pages/Welcome';
 
 const App = () => {
   return (
@@ -37,6 +38,7 @@ const App = () => {
               <Route path="/reserve/:consoleId" element={<ReserveConsole />} />
               <Route path="/consoles/delete" element={<DeleteConsoles />} />
             </Route>
+            <Route path="/welcome" element={<Welcome />} />
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
           </Routes>

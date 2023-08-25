@@ -61,7 +61,7 @@ const LoginForm = () => {
                 onChange={(e) => setUsername(e.target.value)}
                 required
                 aria-label="Username"
-                className="w-full border bg-lime-500 border-white text-black rounded-full py-2 px-4"
+                className="w-full bg-gray-100 bg-opacity-20 border border-white text-white rounded-full py-2 px-4 placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-lime-400 focus:border-transparent focus:bg-lime-400 focus:bg-opacity-20"
               />
               {errors.username && (
                 <p className="text-red-500">{errors.username}</p>
@@ -77,7 +77,7 @@ const LoginForm = () => {
                   onChange={(e) => setPassword(e.target.value)}
                   required
                   aria-label="Password"
-                  className="w-full bg-lime-500 border border-white text-black rounded-full py-2 px-4"
+                  className="w-full bg-gray-100 bg-opacity-20 border border-white text-white rounded-full py-2 px-4 placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-lime-400 focus:border-transparent focus:bg-lime-400 focus:bg-opacity-20"
                 />
                 {errors.password && (
                   <p className="text-red-500">{errors.password}</p>
@@ -86,7 +86,7 @@ const LoginForm = () => {
 
               {isLoading ? (
                 <div>
-                  <div className="border border-white rounded-full py-3 px-4 grid place-items-center w-full">
+                  <div className="w-full md:w-max bg-white text-lime-700 rounded-full py-3 px-4">
                     <div role="status" className="flex items-center">
                       <svg
                         aria-hidden="true"
@@ -104,7 +104,7 @@ const LoginForm = () => {
                           fill="currentFill"
                         />
                       </svg>
-                      <span className="text-white text-xs flex-1 w-max">
+                      <span className="text-lime-700 text-xs flex-1 w-max">
                         Logging in...
                       </span>
                     </div>
@@ -116,7 +116,7 @@ const LoginForm = () => {
                     type="button"
                     onClick={handleSubmit}
                     disabled={isLoading}
-                    className="w-full md:w-max border border-white text-white rounded-full py-2 px-6 hover:bg-white hover:text-lime-500"
+                    className="w-full md:w-max bg-white text-lime-700 rounded-full py-2 px-6 hover:bg-gray-200"
                   >
                     Log in
                   </button>
@@ -131,7 +131,7 @@ const LoginForm = () => {
               to="/register"
               className="text-lg font-semi-bold text-white hover:text-gray-300 hover:underline"
             >
-              Sing up
+              Sign up
             </Link>
             .
           </h2>
