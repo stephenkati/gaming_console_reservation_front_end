@@ -62,7 +62,7 @@ const ReserveConsole = () => {
 
   return (
     <div
-      className="h-screen overflow-hidden bg-cover bg-no-repeat p-12 text-center relative"
+      className="lg:h-screen h-[90vh] overflow-hidden bg-cover bg-no-repeat p-12 text-center relative"
       style={{
         backgroundImage: `url(${bgImage})`,
       }}
@@ -85,34 +85,46 @@ const ReserveConsole = () => {
             excitement you&apos;re looking for.{' '}
           </p>
 
-          <form className="flex flex-wrap max-w-max gap-1 justify-center">
-            <input
-              type="text"
-              placeholder="City"
-              value={city}
-              onChange={(e) => {
-                setCity(e.target.value);
-                setErrors({ ...errors, city: '' });
-              }}
-              className={`text-black border rounded-full py-2 px-4 w-1/3 min-w-max focus:outline-none ${
-                errors.city ? 'border-red-500' : 'border-secondary'
-              }`}
-            />
-            <DatePicker
-              selected={selectedDate}
-              onChange={handleDateChange}
-              dateFormat="yyyy/MM/dd"
-              placeholderText="mm/dd/yyyy"
-              className={`text-black border rounded-full py-2 px-4 w-full focus:outline-none ${
-                errors.selectedDate ? 'border-red-500' : 'border-secondary'
-              }`}
-            />
-            <input
-              type="submit"
-              value="Reserve"
-              onClick={handleSubmit}
-              className="bg-secondary text-white rounded-full py-2 px-4 cursor-pointer"
-            />
+          <form className="p-2 flex flex-col gap-4 max-w-md">
+            <div>
+              <input
+                type="text"
+                placeholder="Enter your city"
+                aria-label="City"
+                value={city}
+                onChange={(e) => {
+                  setCity(e.target.value);
+                  setErrors({ ...errors, city: '' });
+                }}
+                className={`w-full bg-gray-100 bg-opacity-20 border border-white text-white rounded-full py-2 px-4 placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-lime-400 focus:border-transparent focus:bg-lime-400 focus:bg-opacity-20 ${
+                  errors.city ? 'border-red-500' : 'border-white'
+                }`}
+              />
+            </div>
+
+            <div className="w-full flex flex-col gap-4 md:flex-row md:align-center">
+              <div className="w-full">
+                <DatePicker
+                  selected={selectedDate}
+                  onChange={handleDateChange}
+                  aria-label="Date"
+                  dateFormat="yyyy/MM/dd"
+                  placeholderText="Select a date"
+                  className={`w-full bg-gray-100 bg-opacity-20 border border-white text-white rounded-full py-2 px-4 placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-lime-400 focus:border-transparent focus:bg-lime-400 focus:bg-opacity-20 ${
+                    errors.selectedDate ? 'border-red-500' : 'border-white'
+                  }`}
+                />
+              </div>
+
+              <div className="grid place-items-center">
+                <input
+                  type="submit"
+                  value="Reserve"
+                  onClick={handleSubmit}
+                  className="w-full md:w-max bg-white text-lime-700 rounded-full py-2 px-6 hover:bg-gray-200 cursor-pointer"
+                />
+              </div>
+            </div>
           </form>
         </div>
       </div>

@@ -7,7 +7,7 @@ const ConsoleItem = ({ data }) => {
   return (
     <Link
       to={`/console/${data.id}`}
-      className="rounded p-4 text-center w-full inline-block relative hover:shadow-lg hover:border border-gray-200 transition-border&shadow duration-200 ease-in-out"
+      className="rounded p-4 text-center w-full inline-block relative border border-transparent hover:shadow-lg hover:border-gray-200 transition-border&shadow duration-200 ease-in-out"
     >
       <div className="mb-4 grid place-items-center rounded-full w-52 h-52 mx-auto bg-gray-100">
         <img
