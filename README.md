@@ -25,6 +25,8 @@
 
 [Gaming-console-reservation-frontend] is a frontend react app for our Gaming consoles rental backend. It shows the features of the app and provides a user with better experience and interface
 
+## [Link to the Site](https://console-hub.netlify.app/)
+
 ## [Link to the back-end repo](https://github.com/stephenkati/gaming_console_reservation_back_end.git)
 
 ## [Link to the kanbarn board](https://github.com/stephenkati/gaming_console_reservation_back_end/projects/1)
